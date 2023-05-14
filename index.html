@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./script.js"></script>
+    <style>
+        /* * {
+            margin: 0;
+            padding: 0;
+        } */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: aquamarine;
+            height: 90vh;
+            width: 100vh;
+        }
+
+        table {
+            border: 2px green solid;
+            margin: auto;
+            font-size: larger;
+        }
+
+        td {
+            border: 1px solid black;
+            /* padding: 25px */
+        }
+
+        .box {
+            background-color: gold;
+            padding: 30px;
+            cursor: move;
+            border: 3px solid gold;
+        }
+
+        .over {
+            border: 3px dotted red !important;
+            opacity: 0.1;
+        }
+
+        .undoBtn {
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+        }
+        button {
+            padding: 10px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h2>The Magical Grid</h2>
+        <div id="mytable">
+            <table >
+                <tbody>
+                    <tr>
+                        <td id="t1">
+                            <div id="1" class="box" draggable="true">100</div>
+                        </td>
+                        <td id="t2">
+                            <div id="2" class="box" draggable="true">200</div>
+                        </td>
+                        <td id="t3">
+                            <div id="3" class="box" draggable="true">300</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="t4">
+                            <div id="4" class="box" draggable="true">400</div>
+                        </td>
+                        <td id="t5">
+                            <div id="5" class="box" draggable="true">500</div>
+                        </td>
+                        <td id="t6">
+                            <div id="6" class="box" draggable="true">600</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="t7">
+                            <div id="7" class="box" draggable="true">700</div>
+                        </td>
+                        <td id="t8">
+                            <div id="8" class="box" draggable="true">800</div>
+                        </td>
+                        <td id="t9">
+                            <div id="9" class="box" draggable="true">900</div>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <div class="undoBtn">
+                <button onclick="undoLast()">Undo Last Move</button>
+            </div>
+        </div>
+    </main>
+    <script src="./mutation.js"></script>
+
+
+</body>
+
+</html>
